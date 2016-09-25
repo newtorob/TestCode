@@ -43,6 +43,18 @@ void vehicle::set_location(int l) {
     location = l;
 }
 
+int vehicle::get_doors() {
+    return doors;
+}
+int vehicle::get_seats() {
+    return seats;
+}
+int vehicle::get_wheels() {
+    return wheels;
+}
+int vehicle::get_location() {
+    return location;
+}
 int main() {
     //mutators do not return
     vehicle car;
@@ -60,6 +72,9 @@ int main() {
     cout << car.wheels <<endl;
     cout <<car.seats << endl;*/
     car.go(10);
-
+    cout<<car.get_location()<<endl;
+    cout<<car.get_doors()<<endl;
+    cout<<car.get_wheels()<<endl;
+    cout<<car.get_seats()<<endl;
     return 0;
 }
