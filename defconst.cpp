@@ -20,4 +20,22 @@ public:
     width = 0;
     height = 0;
   }
+  Rectangle (int w, int h); //overloaded constructor
 };
+//since we used a protoype above, we must use the scope resolution
+//operator which when we do this for a constructor we end up
+//typing the class name twice, it may look strange but it is correct
+
+Rectangle::Rectangle(int w,int h) {
+  initialHeight = h;
+  initialWidth = w;
+  width = w;
+  height = h;
+}
+
+//now lets create some class objects
+
+int main() {
+  Rectangle rectangle1;//default constructor
+  Rectangle rectangle2(10,20);//use constructorto set starting w and h
+}
